@@ -70,11 +70,12 @@ body {
 }
 
 .app-header-logo {
+  padding-top: 3px;
   display: block;
   height: 100%;
   width: auto;
   max-height: 100%;
-  max-width: 56px;
+  max-width: 62px;
   min-width: 40px;
   min-height: 40px;
   object-fit: contain;
