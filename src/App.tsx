@@ -16,6 +16,7 @@ import {
   theme
 } from "antd";
 import { useTranslation } from "react-i18next";
+import logoUrl from "./assets/logo.png";
 import { ENV } from "./config/env";
 import { EnhancementLoadingOverlay } from "./components/EnhancementLoadingOverlay";
 import { ParticleNetworkBackground } from "./components/ParticleNetworkBackground";
@@ -405,9 +406,21 @@ function App() {
         >
           <main className="app-shell">
         <header className="app-header">
-          <div>
-            <Title level={2}>{t("appTitle")}</Title>
-            <Paragraph>{t("appDescription")}</Paragraph>
+          <div className="app-header-brand">
+            <div className="app-header-logo-wrap" aria-hidden>
+              <img
+                src={logoUrl}
+                alt=""
+                className="app-header-logo"
+                decoding="async"
+              />
+            </div>
+            <div className="app-header-text">
+              <Title level={2}>{t("appTitle")}</Title>
+              <Paragraph className="app-header-description">
+                {t("appDescription")}
+              </Paragraph>
+            </div>
           </div>
           <Space direction="vertical" size={4} className="language-box">
             <Text type="secondary">{t("language")}</Text>
